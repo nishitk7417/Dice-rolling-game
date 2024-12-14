@@ -1,0 +1,155 @@
+body {
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(46,46,83,1) 37%, rgba(22,142,166,1) 100%);
+    color: #ecf0f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+h1{
+    color: #68b5a3;
+    text-decoration: underline;
+    font-size: 3rem;
+    text-align: center;
+}
+.game-container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 70%;
+
+}
+
+.player-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+    padding: 10px;
+    border: 2px solid #7f8c8d;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    margin: 10px 0;
+}
+
+.player-section.active {
+    background-color: #345e54;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+.round-details{
+    width: 100%;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#round-cir-1, #round-cir-2, #round-cir-req{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color:transparent;
+    border: 1px solid;
+}
+.bg-round{
+    background-color: #345e54 !important;
+}
+
+button {background-image: linear-gradient(to right, #1A2980 0%, #26D0CE  51%, #1A2980  100%)}
+#btn-reset {background-image: linear-gradient(to right, #614385 0%, #516395  51%, #614385  100%)}
+button {
+   margin: 10px;
+   padding: 12px 30px;
+   text-align: center;
+   font-size: 1rem;
+   text-transform: uppercase;
+   transition: 0.5s;
+   border: none;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #0a0a0a;
+   border-radius: 10px;
+   display: block;
+   cursor: pointer;
+ }
+
+ button:hover {
+   background-position: right center; 
+   color: #fff;
+   text-decoration: none;
+ }
+
+
+#turn-indicator {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px;
+    text-align: center;
+}
+
+
+.reset {
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .game-container {
+        flex-direction: column; 
+        align-items: center;
+        width: 100%; 
+    }
+
+    .player-section {
+        width: 80%;
+    }
+
+    img {
+        width: 60px; 
+        height: 60px;
+    }
+
+    button {
+        font-size: 1rem; 
+        padding: 10px 25px; 
+    }
+
+    #turn-indicator {
+        font-size: 1.2rem; 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 2rem; 
+    }
+
+    img {
+        width: 50px; 
+        height: 50px;
+    }
+
+    .player-section {
+        width: 90%;
+    }
+
+    button {
+        font-size: 0.9rem; 
+        padding: 8px 20px;
+    }
+
+    #turn-indicator {
+        font-size: 1rem;
+    }
+}
